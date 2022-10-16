@@ -10,22 +10,41 @@
 int main(){
     printf("Enter char value: ");
     char value = getchar();
-
+    char answer;
     if ((value <= 'z') && (value >= 'a')){
-        while (value <= 'z'){
-            putchar(value);
-            value++;
+        printf("[LOWERCASE]\n");
+        if ((value <= 'z') && (value >= 'a')){
+            printf("Display range? (Y/N): ");
+            answer = getchar();
+            if ((answer == 'y') || (answer == 'Y')){
+                while (value <= 'z'){
+                    putchar(value);
+                    value++;
+                }
+                putchar('\n');
+            }
+            else if ((answer == 'n') || (answer == 'N')){
+                printf("Program end!");
+            }
         }
-        putchar('\n');
     }
     else if ((value >= 'A') && (value <= 'Z')){
-        while (value <= 'Z' ){
-            putchar(value);
-            value++;
+        printf("[UPPERCASE]\n");
+        if ((value <= 'Z') && (value >= 'A')){
+            printf("Display range? (Y/N): ");
+            answer = getchar();
+            if ((answer == 'y') || (answer == 'Y')){
+                while (value <= 'Z'){
+                    putchar(value);
+                    value++;
+                }
+                putchar('\n');
+            }
+            else if ((answer == 'n') || (answer == 'N')){
+                printf("Program end!");
+            }
         }
-        putchar('\n');
     }
-
 
     return 0;
 }

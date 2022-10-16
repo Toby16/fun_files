@@ -3,6 +3,7 @@
 /**
  * main - Entry
  * Return: Always 0
+ *
  * I'm a beginner in C programming
  * I'm just playing around with code
 */
@@ -45,7 +46,6 @@ int main(){
             }
         }
     }
-
     
     return 0;
 }

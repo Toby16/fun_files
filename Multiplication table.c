@@ -3,8 +3,7 @@
 /**
  * main - Entry
  * Return: Always 0
- * 
- * i += 1 is the same is i++
+ *
 */
 
 int main(){

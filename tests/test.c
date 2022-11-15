@@ -2,21 +2,21 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct info{
+typedef struct{
 	char name[20];
 	int age;
 	char department[25];
-};
+}info;
 
 int main(int argc, char *argv[]){
 	int i;
-	struct info Amos;
-	Amos = (struct info){.name = "Amos Dian", .age = 20, .department = "Engineering"};
+	info user;
+	user = (info){.name = "Bolaji Baasit", .age = 20, .department = "Engineering"};
 
 	for (i = 0; i < atoi(argv[1]); i++){
-		Amos.age++;
+		user.age++;
 	}
-	printf("Amos is %d years old after %d years\n", Amos.age, i);
+	printf("%s is %d years old after %d years\n",user.name, user.age, i);
 
 	return 0;
 }

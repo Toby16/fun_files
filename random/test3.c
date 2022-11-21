@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 typedef struct id{
 	char *name;
@@ -9,7 +10,7 @@ typedef struct id{
 int main()
 {
 	int i;
-	char *name;
+	char name[20];
 
 	worker mike, *ptr;
 
@@ -19,12 +20,12 @@ int main()
 	ptr -> id = 34312;
 	ptr -> department = "Laboratory Tests II";
 
-	for (i = 3; 0 < i; i--)
+	for (i = 2; 0 <= i; i--)
 	{
 		printf("Enter your name: ");
 		scanf("%s", name);
 		
-		if (name == NULL || name == "")
+		if (name == NULL)
 		{
 			printf("Empty input\n");
 			printf("%d more tries\n", i);
@@ -35,7 +36,7 @@ int main()
 				break;
 			}
 		}
-		else if (name != (ptr -> name))
+		else if (strcmp(name, ptr -> name))
 		{
 			printf("Worker not recognized\n");
 			printf("%d more tries\n", i);
